@@ -11,7 +11,7 @@ This repository contains optimized implementations of various data structures an
 - While adding any content it should be inside its appropiate directory
 - if there is any problem with inaccurate solution create an issue!
 
-## file naming convention
+## File naming convention
 
 | use                | file type                      | comments                                                                                                    |
 | ------------------ | ------------------------------ | ----------------------------------------------------------------------------------------------------------- |
@@ -53,7 +53,17 @@ This repository contains optimized implementations of various data structures an
 ### Connect with me
 
 <p>
-
+<a href="https://linkedin.com/in/sheel-ganvir-7760051b9">
+  <img align="left" alt="Sunny's LinkdeIn" width="3%" style="margin:10px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
+</a>  
+    
+<a href="https://instagram.com/sheel_ganvir">
+  <img align="left" alt="Sunny's Instagram" width="3%" style="margin:10px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />
+</a>
+    
+<a href="https://twitter.com/sheelganvir">
+  <img align="left" alt="Sunny's Twitter" width="3%"  style="margin:10px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />
+</a>&ensp;&ensp;&ensp;
 </p>
 <br>
 
