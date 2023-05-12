@@ -11,7 +11,7 @@ int main(){
     //As x is an integer variable,so we need a pointer that can store address of integer type
 
     int *ptr = &x;
-    cout<<ptr<<endl;
+    cout<<ptr<<endl;    //Print address of x
 
     //Create a pointer that can store address of y
     //As y is an float variable,so we need a pointer that can store address of float type
