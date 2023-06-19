@@ -3,11 +3,12 @@
 #include <iostream>
 using namespace std;
 
+//f(p,q) =  p*f(p,q-1)
+
 int f(int p, int q){
     //base case
     if(q==0) return 1;
-    int z = q*f(p,p);
-    return z;
+    return p*f(p,q-1);
 }
 
 int main(){
