@@ -12,4 +12,5 @@ int main()
     char op;
     cin >> op;
     
-    switch (op){self believe + determination
+    switch (op){self believe + determination 
+    my parents are my key
