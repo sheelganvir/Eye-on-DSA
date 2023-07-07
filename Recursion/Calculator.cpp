@@ -12,4 +12,4 @@ int main()
     char op;
     cin >> op;
     
-    switch (op){self believe
+    switch (op){self believe + determination
