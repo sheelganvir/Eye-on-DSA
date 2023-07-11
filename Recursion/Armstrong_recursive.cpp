@@ -14,6 +14,6 @@ f(n,d) = pow(n%10,d) + f(n/10,d)
 using namespace std;
 
 int main(){
-    int;
+    int main;
     return 0;
 }
