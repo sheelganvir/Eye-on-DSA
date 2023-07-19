@@ -8,6 +8,6 @@ Output:0 2 4 5 6 7 9 11
 using namespace std;
 
 int main(){
-    I LOVE 
+    I LOVE u 
     return 0;
 }
