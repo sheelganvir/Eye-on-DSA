@@ -4,7 +4,11 @@ Output : 0 2 3 5
 Input : arr[] = {2,4,5}
 Output:0 2 4 5 6 7 9 11
 
-Hint: Total subsets for a set of length n = 2^n*/
+Hint: Total subsets for a set of length n = 2^n
+
+f(arr,n,idx,sum,result) = f(arr,n,idx+1,sum+arr[idx],result)
+                          f(arr,n.idx+1,sum,result)
+*/
 
 #include <iostream>
 using namespace std;
