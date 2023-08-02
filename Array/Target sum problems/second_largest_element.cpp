@@ -23,7 +23,7 @@ int secondLargestElement(int array[], int size){
     
 
 int main(){
-    //if elements are not unique
+    //if elements are not uniqueṇ
     int array[] = {2,3,5,7,6,1,7};
     int n = 7;
 
