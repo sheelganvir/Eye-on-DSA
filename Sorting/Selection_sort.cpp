@@ -5,9 +5,9 @@ In ith iteration we are selecting the element for ith element
 Time Complexity : O(n^2)
 Space Complexity : O(1)
 
-Selection sort is unsorted because order of elements with the same value are disturbed
+Selection sort is unstable because order of elements with the same value are disturbed
 
-Note: We prefer selection sort over bubble sort for its worst case time complexity*/
+Note: We prefer selection sort over bubble sort for its best case time complexity*/
 
 #include <iostream>
 #include <vector>
@@ -18,12 +18,12 @@ void selectionSort(vector<int> &v)
 
     int n = v.size();
 
-    for (int i = 0; i <= n - 1; i++)
+    for (int i = 0; i < n - 1; i++)
     {
 
         // finding min element in unsorted array
         int minIndex = i;
-        for (int j = i + 1; j <= n; j++)
+        for (int j = i + 1; j <n; j++)
         {
             if (v[j] < v[minIndex])
             {

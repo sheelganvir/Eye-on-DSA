@@ -3,7 +3,7 @@
 Time Complexity : O(n^2)
 Space Complexity : O(1)
 
-Bubble sort is sorted because order of elements with the same value are not disturbed*/
+Bubble sort is stable because order of elements with the same value are not disturbed*/
 
 #include <iostream>
 #include<vector>
