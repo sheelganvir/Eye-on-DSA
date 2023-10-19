@@ -34,17 +34,21 @@ int partition(int arr[], int first, int last){
     return i+1;
 }
 
-void quickSort(int arr[], int first , int last ){
+int kthSmallest(int arr[], int first , int last, int k){
 
-    // base case 
-    if(first>=last){
-       return;
-    } 
-
-    //Recursive Case
-    int pi = partition(arr, first, last);
-    quickSort(arr, first, pi-1);
-    quickSort(arr, pi+1, last);
+    if(k>0 && k<=last-first+1){
+        int pos = partition(arr, first, last);
+        if(pos-first == k-1){
+            return arr[pos];
+        }
+        else if(pos-first > k-1){
+            return kthSmallest(arr,first,pos-1,k);
+        }
+        else{
+            return kthSmallest(arr,pos+1,last,k-(pos-first+1));
+        }
+    }
+    return INT16_MAX;
 }
 
 int main()
@@ -58,14 +62,10 @@ int main()
     {
         cin >> arr[i];
     }
+    int k;
+    cin>>k;
+    cout<<kthSmallest(arr,0,n-1,k)<<endl;
 
-    quickSort(arr,0,n-1);
-
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-
+    
     return 0;
 }
