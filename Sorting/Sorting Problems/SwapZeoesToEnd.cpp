@@ -49,12 +49,3 @@ int main(){
     return 0;
 }
 
-/*
-Give an array of names of the fruits; you are supposed to sort it in
-lexicographical order using the selection sort
-
-Input: ["papaya", "lime", "watermelon", "apple", "mango", "kiwi"]
-Output: ["apple", "kiwi", "lime", "mango", "papaya", "watermelon"]
-
-Approach --> SELECTION SORT
-*/
