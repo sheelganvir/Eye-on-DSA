@@ -35,7 +35,7 @@ int main(){
         for(int j=0;j<c2;j++){
             int value=0;
             for(int k=0;k<r2;k++){
-                value+=A[i][k]+B[k][j];
+                value+=A[i][k]*B[k][j];
             }
             C[i][j]=value;
         }
