@@ -1,43 +1,35 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
-using namespace std;
+int longestSubarraySumK(int N, int K, const std::vector<int>& NUMS) {
+    int maxLength = 0;
+    int currentSum = 0;
+    int left = 0;
 
-bool isEtherealWrap(vector<int> code) {
-    int n = code.size();
-    
-    // Sort the code array
-    sort(code.begin(), code.end());
-    
-    for (int i = 1; i < n; i++) {
-        if (code[i] - code[i - 1] > 1) {
-            return false;
+    for (int right = 0; right < N; ++right) {
+        currentSum += NUMS[right];
+
+        while (currentSum > K) {
+            currentSum -= NUMS[left];
+            left++;
+        }
+
+        if (currentSum == K && (right - left + 1) > maxLength) {
+            maxLength = right - left + 1;
         }
     }
-    
-    return true;
+
+    return maxLength;
 }
 
 int main() {
-    int t;
-    cin >> t;
-    
-    while (t--) {
-        int n;
-        cin >> n;
-        vector<int> code(n);
-        
-        for (int i = 0; i < n; i++) {
-            cin >> code[i];
-        }
-        
-        if (isEtherealWrap(code)) {
-            cout << "Yes, it is Ethereal Wrap" << endl;
-        } else {
-            cout << "No, it is a normal invisibility cloak" << endl;
-        }
-    }
-    
+    int N = 5;
+    int K = 4;
+    std::vector<int> NUMS = {1, 2, 1, 0, 1};
+
+    int result = longestSubarraySumK(N, K, NUMS);
+
+    std::cout << "Length of the longest subarray with sum " << K << ": " << result << std::endl;
+
     return 0;
 }
