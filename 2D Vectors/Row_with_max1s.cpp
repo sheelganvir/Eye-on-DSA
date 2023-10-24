@@ -22,7 +22,6 @@ int maximumOnesRow(vector<vector<int> >&v){
         }
     }
     return maxOnesRow;
-
 }
 
 int main(){
