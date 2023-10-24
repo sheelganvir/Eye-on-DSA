@@ -24,9 +24,10 @@ int leftMostOneRow(vector<vector<int> > &v){
         while(j>=0 && v[i][j]==1){
             leftMostOne = j;
             j--;
-            maxOneRow =1;
+            maxOneRow =i;
         }
     }
+    return maxOneRow;
 
 }
 
@@ -43,7 +44,7 @@ int maximumOnesRow(vector<vector<int> >&v){
                 int numberOfOnes = columns - j;
                 if(numberOfOnes > maxOnes){
                     maxOnes = numberOfOnes;
-                    maxOnesRow = 1;
+                    maxOnesRow = i;
                 }
                 break;
             }
@@ -64,7 +65,7 @@ int main(){
         }
     }
 
-    int res = maximumOnesRow(vec);
+    int res = leftMostOneRow(vec);
     cout<<res<<endl;
     return 0;
 }

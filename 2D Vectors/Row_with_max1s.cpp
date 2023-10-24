@@ -15,7 +15,7 @@ int maximumOnesRow(vector<vector<int> >&v){
                 int numberOfOnes = columns - j;
                 if(numberOfOnes > maxOnes){
                     maxOnes = numberOfOnes;
-                    maxOnesRow = 1;
+                    maxOnesRow = i;
                 }
                 break;
             }
