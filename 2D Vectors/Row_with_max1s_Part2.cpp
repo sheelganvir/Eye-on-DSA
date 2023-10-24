@@ -1,4 +1,5 @@
 //Given a boolean 2D array where each row is sorted. Find the roww ith  the maximaum number of 1s
+// Finding leftmost one
 
 #include <iostream>
 #include <vector>
