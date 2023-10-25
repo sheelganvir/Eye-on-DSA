@@ -1,35 +1,47 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
+using namespace std;
 
-int longestSubarraySumK(int N, int K, const std::vector<int>& NUMS) {
-    int maxLength = 0;
-    int currentSum = 0;
-    int left = 0;
+void solve()
+{
+     int n ;
+     cin>>n;
+     string bilal[n];
+     int max=1;
+     for(int i=0 ; i<n ; i++){
+      cin>>bilal[i];
+     }
+      int count =0;
+     for(int i=1; i<n ; i++){
+      if(bilal[i]==bilal[i-1]){
+            
+            count++;
+      }
+      if(max<count){
+            max=count;
+      }
+     }
+     if(max>=n/2){
+      cout<<"NO"<<endl;
+     }
+     else{
+      cout<<"YES"<<endl;
+     }
 
-    for (int right = 0; right < N; ++right) {
-        currentSum += NUMS[right];
-
-        while (currentSum > K) {
-            currentSum -= NUMS[left];
-            left++;
-        }
-
-        if (currentSum == K && (right - left + 1) > maxLength) {
-            maxLength = right - left + 1;
-        }
-    }
-
-    return maxLength;
 }
 
-int main() {
-    int N = 5;
-    int K = 4;
-    std::vector<int> NUMS = {1, 2, 1, 0, 1};
+int main()
+{
+      ios_base::sync_with_stdio(false);
+      cin.tie(NULL);
+      cout.tie(NULL);
 
-    int result = longestSubarraySumK(N, K, NUMS);
+      int Test_Cases;
+      cin>>Test_Cases;
 
-    std::cout << "Length of the longest subarray with sum " << K << ": " << result << std::endl;
-
-    return 0;
+      while (Test_Cases--)
+      {
+            solve();
+      }
+      
+      return 0;
 }
