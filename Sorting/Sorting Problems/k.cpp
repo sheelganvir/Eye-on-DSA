@@ -1,47 +1,41 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void solve()
-{
-     int n ;
-     cin>>n;
-     string bilal[n];
-     int max=1;
-     for(int i=0 ; i<n ; i++){
-      cin>>bilal[i];
-     }
-      int count =0;
-     for(int i=1; i<n ; i++){
-      if(bilal[i]==bilal[i-1]){
-            
-            count++;
-      }
-      if(max<count){
-            max=count;
-      }
-     }
-     if(max>=n/2){
-      cout<<"NO"<<endl;
-     }
-     else{
-      cout<<"YES"<<endl;
-     }
+// -1 2 -3 5 6 8 -10 15 -16 -9
+// 
 
-}
+vector<int> rearrangeArray(vector<int>& nums) {
+        int n= nums.size();
+        int ai=0;
+        int bi=1;
+        vector<int> newman(nums.size());
+        for(int i=0 ; i< n ; i++){
+            if(nums[i]>=0){
+                newman[ai]=nums[i];
+                ai+=2;
+            }
+            else{
+                newman[bi]=nums[i];
+                bi+=2;
+            }
+        }
+        
+        return newman;
+    }
 
 int main()
 {
-      ios_base::sync_with_stdio(false);
-      cin.tie(NULL);
-      cout.tie(NULL);
-
-      int Test_Cases;
-      cin>>Test_Cases;
-
-      while (Test_Cases--)
+      vector<int> v(10);
+      for (int i = 0; i < 10; i++)
       {
-            solve();
+            cin >> v[i];
       }
+
+      rearrangeArray(v);
       
+      for (int i = 0; i < 10; i++)
+      {
+            cout<< v[i]<<" ";
+      }
       return 0;
 }
