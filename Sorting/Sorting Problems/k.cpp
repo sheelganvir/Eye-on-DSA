@@ -1,3 +1,11 @@
+/**
+ * The code takes an input array of integers, rearranges the positive numbers to even indices and
+ * negative numbers to odd indices, and returns the rearranged array.
+ * 
+ * param nums The parameter `nums` is a vector of integers.
+ * 
+ * return The `rearrangeArray` function returns a vector of integers.
+ */
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -11,6 +19,9 @@ vector<int> rearrangeArray(vector<int>& nums) {
         vector<int> newman(nums.size());
         for(int i=0 ; i< n ; i++){
             if(nums[i]>=0){
+                /* The line `newman[ai]=nums[i];` is assigning the value of `nums[i]` to the element at
+                index `ai` in the `newman` vector. This is part of the process of rearranging the
+                positive numbers to even indices in the `newman` vector. */
                 newman[ai]=nums[i];
                 ai+=2;
             }
