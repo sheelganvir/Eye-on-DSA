@@ -17,6 +17,9 @@ vector<int> rearrangeArray(vector<int>& nums) {
         int ai=0;
         int bi=1;
         vector<int> newman(nums.size());
+        /* The line `for(int i=0 ; i< n ; i++)` is a for loop that iterates over the elements of the
+        `nums` vector. It starts with `i` equal to 0 and continues as long as `i` is less than the
+        size of the `nums` vector (`n`). After each iteration, `i` is incremented by 1. */
         for(int i=0 ; i< n ; i++){
             if(nums[i]>=0){
                 /* The line `newman[ai]=nums[i];` is assigning the value of `nums[i]` to the element at
