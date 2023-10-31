@@ -7,7 +7,7 @@ using namespace std;
 void merge(int arr[], int l, int mid, int r){
     int an = mid-l+1;
     int bn = r-mid;
-    // create temp arrays
+    
     int L[an], R[bn];
     for (int i=0;i<an;i++){
         L[i] = arr[l + i];
@@ -16,8 +16,8 @@ void merge(int arr[], int l, int mid, int r){
         R[j] = arr[mid + 1 + j];
     }
 
-    int i=0, j=0; //intial index of array a and b
-    int k = l; // initial index of merged subarray
+    int i=0, j=0; 
+    int k = l; 
     while (i<an && j<bn){
         if (L[i] <= R[j]){
             arr[k++]=L[i++];
@@ -35,7 +35,7 @@ void merge(int arr[], int l, int mid, int r){
 }
 
 void MergeSort(int arr[], int l, int r){
-    //base case
+    
     if(l>=r){
         return;
     }
