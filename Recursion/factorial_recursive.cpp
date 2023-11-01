@@ -22,3 +22,6 @@ int main(){
     return 0;
      
 }
+
+//Time complexity = 0(n)
+//space complexity = 0(n)
