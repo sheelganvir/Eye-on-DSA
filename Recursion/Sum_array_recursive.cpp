@@ -5,7 +5,6 @@ using namespace std;
 int f(int *arr, int idx, int n)
 {
     // base case
-    int sum = 0;
     if (idx == n - 1)
     {
         // idx is at the last index so there is only one element under consideration
