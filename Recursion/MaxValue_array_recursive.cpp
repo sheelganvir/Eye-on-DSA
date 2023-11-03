@@ -17,3 +17,6 @@ int main(){
     cout<<f(arr,0,n);
     return 0;
 }
+
+////Time complexity = 0(n) 
+//space complexity = 0(n)
