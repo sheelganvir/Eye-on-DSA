@@ -14,6 +14,7 @@ void f(int n)
     cout<<n<<" ";
 }
 
+
 int main()
 {   
     f(5);
