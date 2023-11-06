@@ -32,6 +32,7 @@ int pow_recursive(int p, int q)
     }
 } 
 
+
 int f(int n, int d){
     //base case
     if(n==0) return 0;
