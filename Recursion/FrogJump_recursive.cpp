@@ -1,4 +1,4 @@
-/*There are N stones, numbered 1,2,,..,N. For each i (1si<N), the height of Stone i is hi.There
+/*There are N stones, numbered 1,2,,..,N. For each i (1<=i<N), the height of Stone i is hi.There
  is a frog who is initially on Stone 1. Не will repeat the following action some number of
 times to reach Stone N:
 
