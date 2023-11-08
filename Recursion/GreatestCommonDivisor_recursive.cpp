@@ -16,6 +16,7 @@ int gcd(int a, int b){
     return gcd(b,a%b);
 }
 
+
 int main(){
     cout<<gcd(48,8);
     return 0;
