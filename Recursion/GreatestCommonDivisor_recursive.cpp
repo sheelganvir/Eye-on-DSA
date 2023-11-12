@@ -7,6 +7,7 @@ Output: 1
 gcd(a,b) = gcd(b, a%b) ; a>b
 */
 
+
 #include <iostream>
 using namespace std;
 
