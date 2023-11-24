@@ -18,6 +18,7 @@ int gcd(int a, int b){
 }
 
 
+
 int main(){
     cout<<gcd(48,8);
     return 0;
