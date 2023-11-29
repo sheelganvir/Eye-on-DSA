@@ -72,3 +72,6 @@ int main(){
     cout<<"["<<result[0]<<","<<result[1]<<"]";
     return 0;
 }
+
+//Time: O(log n)
+//Space: O(1)
