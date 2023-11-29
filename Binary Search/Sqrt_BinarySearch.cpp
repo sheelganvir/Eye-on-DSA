@@ -18,8 +18,8 @@ int sqrt(int x){
         }
     }
     return ans;
-
 }
+
 int main(){
     
     int x;
