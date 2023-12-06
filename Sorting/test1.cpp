@@ -4,32 +4,21 @@
 using namespace std;
 
 string reverseWords(string s) {
-    int i= s.length()-1;
-    string ans;
-    while(i >= 0) {
-        int j = 0;
-        int pos = 0;
-        while (i>=0 && s[i]!=' ') {
-            j++;
-            pos = i;
-            i--;
-        }
-        if (j!=0) {
-            string sub = s.substr(pos, j);
-            ans+=sub + " ";
-        }
-        i--;
-    }
-
-    if(!ans.empty()) {
-        ans.pop_back();
-    }
-    return ans;
+    
 }
 
 int main() {
-    string input = "Hello World";
-    string result = reverseWords(input);
-    cout << result << endl;
+    int t;
+    cin>>t;
+    string col = "abcdefgh";
+    string rows = "12345678";
+    string s;
+    
+    for (int i = 0; i<t;i++) {
+        cin>>s;
+        for(int i=0 ; i<14 ; i++){
+            
+        }
+    }
     return 0;
 }
