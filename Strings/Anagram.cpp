@@ -47,3 +47,7 @@ int main(){
     
     return 0;
 }
+
+
+//Time: O(length of strings)
+//Space: O(26) --> O(1)
