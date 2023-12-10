@@ -18,7 +18,7 @@ bool isAnagram(string s1, string s2){
     }
 
     //store frequency of characters s1 and s2
-    for(int i=0 ; s1.length(); i++){
+    for(int i=0 ; i<s1.length(); i++){
         freq[s1[i]-'a']++;  // for s1, we are incrementing freq of char
         freq[s2[i]-'a']--;  // for s2, we are decrementing freq of char
     }
