@@ -9,6 +9,9 @@
 
     Input2: s = 3[b2[ca]]
     Output: bcacabcacabcaca
+
+    Time: O(n), where n is the length of decoded string
+    Space: O(n), where n is the length of decoded string
 */
 
 #include <iostream>
