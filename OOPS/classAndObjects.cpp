@@ -8,7 +8,6 @@ public:
     string colour;
 };
 
-
 int main(){
     fruit apple;
     apple.name = "APPLE";
