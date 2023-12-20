@@ -19,6 +19,7 @@ int main(){
     mango->name = "mango";
     mango->color = "yellow";
     cout << mango->name << " is " << mango->color << endl;
+    
     return 0;
 }
 
