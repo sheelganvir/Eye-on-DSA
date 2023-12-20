@@ -2,6 +2,7 @@
 using namespace std;
 
 class parent{
+    //public, private, protected as access specifiers
 public:
     int x;
 protected:
@@ -10,6 +11,7 @@ private:
     int z;
 };
 
+//public, private, protected as inheritance modes
 class Child1: public parent{
     //x will remain public
     //y will remain protected
