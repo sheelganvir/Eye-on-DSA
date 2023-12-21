@@ -15,7 +15,14 @@ public:
     }
 };
 
+class GrandChild: public child{
+public:
+    GrandChild(){
+        cout << "Grand Child Constructor Called" << endl;
+    }
+};
+
 int main(){
-    child c;    
+    GrandChild gc;    
     return 0;
-}
+} 
