@@ -29,6 +29,24 @@ void insertAtTail(Node* &head, int val){
        //               : O(1); if tail pointer is passed or given
 }
 
+void insertAtPosition(Node* &head, int val, int position){
+
+    if(position==0){
+        insertAtHead(head,val);
+        return;
+    }
+    Node* new_node = new Node(val);
+    Node* temp = head;
+    int curr_pos = 0;
+    while(curr_pos!=position-1){
+        temp=temp->next;
+        curr_pos++;
+    }
+    //temp is pointing to node at pos-1
+    new_node->next = temp->next;
+    temp->next = new_node;
+}
+
 void display(Node* &head){ 
     Node* temp = head;
     while (temp != NULL) {
@@ -47,6 +65,7 @@ int main(){
     display(head);
     insertAtTail(head,3);
     display(head);
-    
+    insertAtPosition(head,10 ,2);
+    display(head);
     return 0;
 }
