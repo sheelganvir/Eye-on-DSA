@@ -66,6 +66,18 @@ void deleteAtHead(Node* &head){
     free(temp);
 }
 
+void deleteAtTail(Node* &head){
+    Node* second_last = head;
+    while(second_last->next->next!=NULL){
+        second_last=second_last->next;
+    }
+
+    //now second_last points to the second last node
+    Node *temp = second_last->next;
+    second_last->next = NULL;
+    free(temp);
+}
+
 void display(Node* &head){ 
     Node* temp = head;
     while (temp != NULL) {
@@ -91,6 +103,7 @@ int main(){
 
     deleteAtHead(head);
     display(head);
-    
+    deleteAtTail(head);
+    display(head);
     return 0;
 }
