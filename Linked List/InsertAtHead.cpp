@@ -18,7 +18,7 @@ void insertAtHead(Node* &head, int val){
     head = newNode;
 }   //Time complexity: O(1)
 
-void display(Node* &head){
+void display(Node* &head){ 
     Node* temp = head;
     while (temp != NULL) {
         cout << temp->val << "->";
