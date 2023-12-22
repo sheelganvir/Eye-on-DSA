@@ -65,7 +65,7 @@ void display(Node* &head){
     while (temp != NULL) {
         cout << temp->val << "->";
         temp = temp->next;
-    }
+    } 
     cout << "NULL"<<endl;
 }
 
