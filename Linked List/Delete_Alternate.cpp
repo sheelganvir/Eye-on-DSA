@@ -1,3 +1,9 @@
+/*
+    Given the head of the linked list, delete every alternate elements         
+    from the linked list starting from the second element.
+*/
+
+
 #include <iostream>
 using namespace std;
 
@@ -43,6 +49,16 @@ public:
     }
 };
 
+void deleteAlternate(Node* &head){
+    Node* curr_node = head;
+    while(curr_node!=NULL && curr_node!=NULL){
+        Node* temp = curr_node->next;   // this is node to be deleted
+        curr_node->next = curr_node->next->next;
+        free(temp);
+        curr_node = curr_node->next;
+    }
+}
+
 int main(){
     
     LinkedList ll;
@@ -52,6 +68,9 @@ int main(){
     ll.insertAtTail(4);
     ll.insertAtTail(5);
     ll.insertAtTail(6);
+    ll.display();
+
+    deleteAlternate(ll.head);
     ll.display();
     return 0;
 }
