@@ -18,4 +18,4 @@ public:
 int main(){
     child c;    
     return 0;
-}
+} 

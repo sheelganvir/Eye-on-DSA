@@ -25,12 +25,12 @@ public:
 class GrandChild: public child1, public child2{
 public:
     GrandChild(){
-        cout << "Grand Child Constructor Called" << endl;
+        cout << "Grand  Child Constructor Called" << endl;
     }
 };
 
 int main(){
-
+ 
     GrandChild c;
     return 0;
 } 
