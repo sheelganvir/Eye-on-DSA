@@ -1,6 +1,7 @@
 /*
-    Given the head of the linked list, delete all duplicates such that each 
-    element appears only once. Return the linked list sorted as well.
+    *********** TRAVERSING IN REVERSE ORDER ***********
+
+    Given the head of a singly linked list, print the linked list in reverse order
 */
 
 
@@ -50,17 +51,12 @@ public:
 };
 
 void printReverse(Node* &head){
-    Node* curr_node = head;
-    while(curr_node){   // this means: curr_node!=NULL
-        if(curr_node->next!=NULL && curr_node->val == curr_node->next->val){
-            Node* del_node = curr_node->next;
-            curr_node->next = curr_node->next->next;
-            free(del_node);
-        }
-        else{
-            curr_node = curr_node->next;
-        }
+    if(head==NULL){
+        return;
     }
+    // Recursively call for the rest of the linked list. The second parameter, prev is used to keep track of the node before
+    printReverse(head->next);
+    cout<<head->val<<" ";
 }
 
 int main(){
@@ -77,6 +73,5 @@ int main(){
     ll.display();
 
     printReverse(ll.head);
-    ll.display();
     return 0;
 }
