@@ -1,6 +1,6 @@
 /*
-    Given the head of the linked list, delete every alternate elements         
-    from the linked list starting from the second element.
+    Given the head of the linked list, delete all duplicates such that each 
+    element appears only once. Return the linked list sorted as well.
 */
 
 
@@ -49,13 +49,17 @@ public:
     }
 };
 
-void deleteAlternate(Node* &head){
+void printReverse(Node* &head){
     Node* curr_node = head;
-    while(curr_node->next!=NULL && curr_node!=NULL){
-        Node* temp = curr_node->next;   // this is node to be deleted
-        curr_node->next = curr_node->next->next;
-        free(temp);
-        curr_node = curr_node->next;
+    while(curr_node){   // this means: curr_node!=NULL
+        if(curr_node->next!=NULL && curr_node->val == curr_node->next->val){
+            Node* del_node = curr_node->next;
+            curr_node->next = curr_node->next->next;
+            free(del_node);
+        }
+        else{
+            curr_node = curr_node->next;
+        }
     }
 }
 
@@ -66,11 +70,13 @@ int main(){
     ll.insertAtTail(2);
     ll.insertAtTail(3);
     ll.insertAtTail(4);
+    ll.insertAtTail(4);
+    ll.insertAtTail(5);
     ll.insertAtTail(5);
     ll.insertAtTail(6);
     ll.display();
 
-    deleteAlternate(ll.head);
+    printReverse(ll.head);
     ll.display();
     return 0;
 }
