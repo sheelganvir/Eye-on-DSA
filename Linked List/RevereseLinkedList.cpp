@@ -50,13 +50,22 @@ public:
     }
 };
 
-void Reverse(Node* &head){
-    if(head==NULL){
-        return;
+Node* Reverse(Node* &head){
+    Node* prev = NULL;
+    Node* current = head;
+
+    //curr->next = prev
+    //move all 3 pointers by one step ahead
+    while(current!=NULL){
+        Node* next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
     }
-    // Recursively call for the rest of the linked list. The second parameter, prev is used to keep track of the node before
-    Reverse(head->next);
-    cout<<head->val<<" ";
+
+    //when this loop ends, prev pointer pointing to my last node which is new head
+    Node* new_head = prev;
+    return new_head;
 }
 
 int main(){
@@ -72,7 +81,7 @@ int main(){
     ll.insertAtTail(6);
     ll.display();
 
-    Reverse(ll.head);
+    ll.head = Reverse(ll.head);
     ll.display();
     return 0;
 }
