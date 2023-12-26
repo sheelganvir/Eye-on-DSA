@@ -1,5 +1,7 @@
 /*
-    Given the head of a singly linked list, reverse the nodes of the list k at a time, and return the modified list 
+    Given two linked list tell if they arre equall or not. 
+    Two linked lists are equal if they have the same data and
+    the arrangement of the data is also same.
 */
 
 
