@@ -63,6 +63,7 @@ int getLength(Node* head){
     return length;
 }
 
+
 Node* moveHeadByK(Node* head, int k){
     Node* ptr = head;
     while(k--){
