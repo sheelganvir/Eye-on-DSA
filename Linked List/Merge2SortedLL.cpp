@@ -102,9 +102,10 @@ int main(){
     ll1.display();  
     ll2.display();    
 
-    mergeLinkedLists(ll1.head,ll2.head);
+    LinkedList ll3;
+    ll3.head = mergeLinkedLists(ll1.head,ll2.head);
     cout<<"Merged Linked List: "<<endl;
-    ll1.display();
+    ll3.display();
     
     return 0;
 }
