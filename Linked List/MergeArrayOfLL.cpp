@@ -80,12 +80,18 @@ Node* mergeLinkedLists(Node* &head1, Node* &head2){
 }
 
 Node* mergeKLinkedList(vector<Node*> &lists){
+
+    if(lists.size()==0){
+        return NULL;
+    }
+
     while(lists.size()>1){
         Node* mergedHead = mergeLinkedLists(lists[0],lists[1]);
         lists.push_back(mergedHead);
         lists.erase(lists.begin());
         lists.erase(lists.begin());
     }
+    return lists[0];
 }
 
 //vector -> head1, head2, head3, head4
@@ -115,15 +121,29 @@ int main(){
     ll2.insertAtTail(100);
     ll2.insertAtTail(200);
     ll2.insertAtTail(2000);
- 
-    
-    ll1.display();  
-    ll2.display();    
 
     LinkedList ll3;
-    ll3.head = mergeLinkedLists(ll1.head,ll2.head);
-    cout<<"Merged Linked List: "<<endl;
-    ll3.display();
+    ll3.insertAtTail(5);
+    ll3.insertAtTail(99);
+    ll3.insertAtTail(122);
+    ll3.insertAtTail(199);
+    ll3.insertAtTail(299);
+    
+    LinkedList ll4;
+    ll4.insertAtTail(9);
+    ll4.insertAtTail(44);
+    ll4.insertAtTail(444);
+    ll4.insertAtTail(1000);
+
+    vector<Node*> lists;
+    lists.push_back(ll1.head);
+    lists.push_back(ll2.head);
+    lists.push_back(ll3.head);
+    lists.push_back(ll4.head);
+
+    LinkedList mergedLL;
+    mergedLL.head = mergeKLinkedList(lists);
+    mergedLL.display();
     
     return 0;
 }
