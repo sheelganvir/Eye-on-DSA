@@ -49,100 +49,31 @@ public:
     }
 };
 
-Node* mergeLinkedLists(Node* &head1, Node* &head2){
+Node* findMiddleNode(Node* &head){
 
-    Node* dummyHeadNode = new Node(-1);
+    Node* slow = head;
+    Node* fast = head;
 
-    Node* ptr1 = head1;
-    Node* ptr2 = head2;
-    Node* ptr3 = dummyHeadNode;
+    while (fast!=NULL && fast->next!=NULL)
+    {   
+        slow=slow->next;
+        fast=fast->next->next;
+    }
 
-    while(ptr1 && ptr2){
-        if(ptr1->val < ptr2->val){
-            ptr3->next = ptr1;
-            ptr1 = ptr1->next;
-        }
-        else{
-            ptr3->next = ptr2;
-            ptr2 = ptr2->next;
-        }
-        ptr3 = ptr3->next;
-    }
-    // If any of the linked list is still not empty then add it to the end
-    if(ptr1){
-        ptr3->next = ptr1;
-    }
-    else{
-        ptr3->next = ptr2;
-    }
-    return dummyHeadNode->next;
+    return slow;
 }
-
-Node* mergeKLinkedList(vector<Node*> &lists){
-
-    if(lists.size()==0){
-        return NULL;
-    }
-
-    while(lists.size()>1){
-        Node* mergedHead = mergeLinkedLists(lists[0],lists[1]);
-        lists.push_back(mergedHead);
-        lists.erase(lists.begin());
-        lists.erase(lists.begin());
-    }
-    return lists[0];
-}
-
-//vector -> head1, head2, head3, head4
-//1. head1 and head2 ll will be merged
-//vector -> head3 head4 mergedhead1_2
-//2. head3 and head4 will be merged
-//vector -> mergedhead1_2 mergedhead3_4
-//3. mergedhead1_2 and mergedhead3_4 will be merged
-// vector -> mergedhead1_2_3_4
-
 
 int main(){
     
     LinkedList ll1;
     ll1.insertAtTail(1);
     ll1.insertAtTail(2);
-    ll1.insertAtTail(26);
-    ll1.insertAtTail(48); 
-    ll1.insertAtTail(555); 
-    ll1.insertAtTail(699); 
+    ll1.insertAtTail(3);
+    ll1.insertAtTail(4); 
+    ll1.insertAtTail(5); 
+    ll1.insertAtTail(6); 
 
-
-    LinkedList ll2;
-    ll2.insertAtTail(6);
-    ll2.insertAtTail(20);
-    ll2.insertAtTail(50);
-    ll2.insertAtTail(100);
-    ll2.insertAtTail(200);
-    ll2.insertAtTail(2000);
-
-    LinkedList ll3;
-    ll3.insertAtTail(5);
-    ll3.insertAtTail(99);
-    ll3.insertAtTail(122);
-    ll3.insertAtTail(199);
-    ll3.insertAtTail(299);
-    
-    LinkedList ll4;
-    ll4.insertAtTail(9);
-    ll4.insertAtTail(44);
-    ll4.insertAtTail(444);
-    ll4.insertAtTail(1000);
-
-    vector<Node*> lists;
-    lists.push_back(ll1.head);
-    lists.push_back(ll2.head);
-    lists.push_back(ll3.head);
-    lists.push_back(ll4.head);
-
-    LinkedList mergedLL;
-    mergedLL.head = mergeKLinkedList(lists);
-    mergedLL.display();
-    
+    Node* middleNode = findMiddleNode(ll1.head);
+    cout<<middleNode->val<<endl;
     return 0;
 }
