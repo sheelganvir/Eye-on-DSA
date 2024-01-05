@@ -107,6 +107,9 @@ int main(){
     cout<<detectCycle(ll1.head)<<endl;    
 
     removeCycle(ll1.head);
+
+    cout<<"After removing cycle: "<<endl;
+    cout<<detectCycle(ll1.head)<<endl;    
     ll1.display();
     
     return 0;
