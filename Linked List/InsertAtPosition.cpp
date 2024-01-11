@@ -12,7 +12,6 @@ public:
     }
 };
 
-
 void insertAtHead(Node* &head, int val){
     Node* newNode = new Node(val);
     newNode->next = head;
