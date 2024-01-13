@@ -18,14 +18,12 @@ public:
     }
 };
 
-
 class LinkedList{
 public:
     Node* head;
     LinkedList(){
         head=NULL;
     }
-
     void insertAtTail(int val){
         Node* new_node = new Node(val);
         if(head==NULL){
