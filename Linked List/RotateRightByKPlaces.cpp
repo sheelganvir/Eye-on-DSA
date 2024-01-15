@@ -50,45 +50,35 @@ public:
     }
 };
 
-bool isPalindrome(Node* head){
+Node* rotateByK(Node* &head, int k){
 
-    //1. Find the middle element
-    Node* slow = head;
-    Node* fast = head;
+    //1. find length of ll
+    int n=0;
+    //2. find tail node
+    Node * tail = head;
+    while(tail->next != NULL){
+        n++;
+        tail = tail -> next;
+    }
+    n++; //including the last node
 
-    while (fast && fast->next)
-    {
-        slow=slow->next;
-        fast=fast->next->next;
+    k = k%n;
+    if(k==0){
+        return head;
     }
 
-    //now slow is pointing to middle element
-    //2. Break the linked list in the  middle
+    tail->next = head;
 
-    Node* curr = slow->next;
-    Node* prev = slow;
-    slow->next = NULL;
-
-    //3. Reverse the second half of linked list
-    while(curr){
-        Node* nextNode = curr->next;
-        curr->next = prev;
-        prev = curr;
-        curr = nextNode;
+    //3. Traversee n-k nodes
+    Node* temp = head;
+    for(int i=1;i<n-k;i++){
+        temp=temp->next;
     }
+    
+    Node* newHead = temp->next;
+    temp->next=NULL;
+    return newHead;
 
-    //4. Check if the two linked lists are equal
-    Node* head1 = head;
-    Node* head2 = prev;
-
-    while(head2){
-        if(head2->val!=head1->val){
-            return false;
-        }
-        head1 = head1->next;
-        head2 = head2->next;
-    }
-    return true;    
 }
 
 int main(){
@@ -104,7 +94,9 @@ int main(){
 
     ll1.display();
 
-    cout<<isPalindrome(ll1.head)<<endl;
+    ll1.head = rotateByK(ll1.head, 4);
+    cout<<"Linked List after rotation: \n";
+    ll1.display();
     
     return 0;
 }
