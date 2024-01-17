@@ -1,5 +1,6 @@
 /*
-    Given the head of a singly linked list, reverse the nodes of the list k at a time, and return the modified list 
+    Given the head of a singly linked list, swap every two adjacent nodes and return its head. 
+    You may not modify the values in the list's node. Only nodes themselves may be charged. 
 */
 
 
@@ -48,28 +49,18 @@ public:
     }
 };
 
-Node* ReversekNodes(Node* &head, int k){
+Node* SwapAdjacent(Node* &head){
     
-    Node* prev = NULL;
-    Node* curr = head;
-
-    int counter = 0;    //for counting first k node
-
-    while(curr!=NULL && counter<k){     //reversing first k nodes
-        Node* next = curr->next;
-        curr->next = prev;
-        prev = curr;
-        curr = next;
-        counter++;
+    // base case
+    if(head==NULL || head->next==NULL){
+        return head;
     }
 
-    // curr pointer will give us (k+1)th node
-    if(curr!=NULL){
-        Node* new_head = ReversekNodes(curr,k);
-        head->next = new_head;
-    }
-
-    return prev;    //prev pointer will give the new head of connected linked list
+    //recursive case
+    Node* secondNode = head->next;
+    head->next = SwapAdjacent(secondNode->next);
+    secondNode->next = head;    // reversing the link between first and second node
+    return secondNode;
     
 }
 
@@ -84,7 +75,7 @@ int main(){
     ll.insertAtTail(6);
     ll.display();
 
-    ll.head = ReversekNodes(ll.head,2);
+    ll.head = SwapAdjacent(ll.head);
     ll.display();
     return 0;
 }
