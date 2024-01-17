@@ -1,8 +1,8 @@
 /*
     Given head, the head of a linked list, reorder the Linked List.
 
-    Before Reorder :  L0->L1->...->Ln-1->Ln
-    After Reorder : L0->Ln->L1->Ln-1->L2->Ln-2->...
+    Before Reorder :  L0 -> L1 ->...-> Ln-1 -> Ln
+    After Reorder : L0 -> Ln-> L1-> Ln-1 -> L2 -> Ln-2 ->...
 
     Hint: 1. Find the middle element.
           2. Break the linked list into 2.
@@ -58,6 +58,8 @@ public:
 };
 
 Node* ReorderList(Node* head){
+
+    //check if linked list has atleast 3 nodes.
 
     //1. Find the middle element
     Node* slow = head;
