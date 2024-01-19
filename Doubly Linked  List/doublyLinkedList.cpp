@@ -15,7 +15,7 @@ public:
 };
 
 class DoublyLinkedList{
-    public:
+public:
     Node* head;
     Node* tail;
 
