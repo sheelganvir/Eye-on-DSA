@@ -48,6 +48,25 @@ public:
         tail = newNode;
         return;
     }
+
+    void insetAtPosition(int val, int k){
+        Node* newNode = new Node(val);
+        
+        //assuming k is less or equal to length of doubly linked list
+        Node* temp = head;
+        int count = 1;
+
+        while(count < (k-1)){
+            temp = temp->next;
+            count++;
+        }
+
+        //temp will be pointing to the node at (k-1)th position
+        newNode->next = temp->next;
+        temp->next = newNode;
+        newNode->prev = temp;
+        newNode->next->prev = newNode;
+    }
 };
 
 int main(){
@@ -60,5 +79,8 @@ int main(){
     dll.insertAtEnd(3);
     dll.display();
 
+    dll.insetAtPosition(10,2);
+    dll.display();
+    
     return 0;
 }
