@@ -49,17 +49,31 @@ public:
         return;
     }
 
-    
+    void deleteAtStart(){
+        if(head == NULL)return ;
+
+        Node* temp = head;
+        head = head->next;
+        if(head==NULL){ //if doubly linkeed list had only 1 node
+            tail=NULL;
+        }else{
+            head->prev = NULL;
+        }
+        free(temp);
+        return;
+    }
 };
 
 int main(){
     
     DoublyLinkedList dll;
     dll.insertAtStart(1);
-    dll.display();
     dll.insertAtStart(2);
-    dll.display();
     dll.insertAtStart(3);
+    dll.display();
+
+    dll.deleteAtStart();
+    cout << "After deleting the element at start : ";
     dll.display();
 
     return 0;
