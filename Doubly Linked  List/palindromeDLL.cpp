@@ -49,7 +49,7 @@ public:
         return;
     }
 
-    bool checkPalindrome(Node* &head, Node* &tail){
+    bool isPalindrome(Node* head, Node* tail){
         if(head == NULL || head == tail)return true;
 
         
