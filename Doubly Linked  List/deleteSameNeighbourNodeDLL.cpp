@@ -71,6 +71,8 @@ int main(){
     DoublyLinkedList dll;
     dll.insertAtEnd(1);
     dll.insertAtEnd(2);
+    dll.insertAtEnd(3);
+    dll.insertAtEnd(2);
     dll.insertAtEnd(2);
     dll.insertAtEnd(1);
     dll.display();
