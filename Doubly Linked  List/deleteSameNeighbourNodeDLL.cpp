@@ -50,16 +50,19 @@ public:
     }
 
     void deleteSameNeighbourNode(Node* head, Node* tail){
-        if(head == NULL || head == tail)return true;
-
-        while(head!=tail && tail!=head->prev){
-            if(head->val!=tail->val){
-                return false;
+        
+        Node* currNode = tail->prev;
+        while(currNode!=head){
+            Node* prevNode = currNode->prev;
+            Node* nextNode = currNode->next;
+            if(prevNode->val==nextNode->val){
+                // Need to delete curr node
+                prevNode->next = nextNode;
+                nextNode->prev = prevNode;
+                free(currNode);
             }
-            head=head->next;
-            tail=tail->prev;
+            currNode=prevNode;
         }
-        return true;
     }
 };
 
@@ -74,6 +77,6 @@ int main(){
 
     dll.deleteSameNeighbourNode(dll.head, dll.tail);
     dll.display();
-    
+
     return 0;
 }
