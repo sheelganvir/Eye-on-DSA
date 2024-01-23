@@ -1,3 +1,7 @@
+/*
+    Given the head of doubly linked list , delete the node whose
+    neighbours have the same value. Traverse the list from right to left.
+*/
 #include <iostream>
 using namespace std;
 
