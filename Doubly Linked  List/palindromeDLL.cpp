@@ -52,7 +52,14 @@ public:
     bool isPalindrome(Node* head, Node* tail){
         if(head == NULL || head == tail)return true;
 
-        
+        while(head!=tail && tail!=head->prev){
+            if(head->val!=tail->val){
+                return false;
+            }
+            head=head->next;
+            tail=tail->prev;
+        }
+        return true;
     }
 };
 
@@ -61,12 +68,11 @@ int main(){
     DoublyLinkedList dll;
     dll.insertAtEnd(1);
     dll.insertAtEnd(2);
-    dll.insertAtEnd(3);
-    dll.insertAtEnd(4);
+    dll.insertAtEnd(2);
+    dll.insertAtEnd(1);
     dll.display();
 
-    dll.reverse(dll.head, dll.tail);
-    dll.display();
+    cout<<dll.isPalindrome(dll.head, dll.tail);
     
     return 0;
 }
