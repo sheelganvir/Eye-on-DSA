@@ -60,8 +60,10 @@ public:
         tail = newNode;
         return;
     }
+    
+};
 
-    bool isCriticalPoint(Node* &currNode){
+bool isCriticalPoint(Node* &currNode){
         if (currNode->prev == NULL || currNode->next == NULL) {
         // The current node is the first or last node in the linked list
         return false;
@@ -75,7 +77,7 @@ public:
         return false;
     }
 
-    vector<int> distBetweenCriticalPoints(Node* tail){
+vector<int> distBetweenCriticalPoints(Node* tail){
         
         vector<int> ans(2,INT16_MAX);
         int firstCP = -1, lastCP = -1;
@@ -107,7 +109,6 @@ public:
         }
         return ans;
     }
-};
 
 int main(){
     
@@ -120,7 +121,7 @@ int main(){
     
     dll.display();
 
-    vector<int>ans = dll.distBetweenCriticalPoints(dll.tail);
+    vector<int>ans = distBetweenCriticalPoints(dll.tail);
     cout<<ans[0]<<ans[1]<<endl;
 
     return 0;
