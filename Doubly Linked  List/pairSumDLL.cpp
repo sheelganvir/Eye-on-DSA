@@ -68,25 +68,25 @@ public:
 
 vector<int> pairSumDLL(Node* head, Node* tail, int x){
 
-        vector<int> ans(2,-1);
-        while(head!=tail){
-            int sum = head->val + tail->val;
-            if(sum==x){
-                ans[0] = head->val;
-                ans[1] = tail->val;
-                return ans;
-            }
-
-            if(sum>x){  // I need smaller values, I wil move tail back
-                tail=tail->prev;
-            }
-            else{   // I need bigger values, I will move forward
-                head=head->next;
-            }
+    vector<int> ans(2,-1);
+    while(head!=tail){
+        int sum = head->val + tail->val;
+        if(sum==x){
+            ans[0] = head->val;
+            ans[1] = tail->val;
+            return ans;
         }
-        return ans;
-        
+
+        if(sum>x){  // I need smaller values, I wil move tail back
+            tail=tail->prev;
+        }
+        else{   // I need bigger values, I will move forward
+            head=head->next;
+        }
     }
+    return ans;
+    
+}
 
 int main(){
     
