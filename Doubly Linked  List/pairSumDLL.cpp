@@ -91,16 +91,17 @@ vector<int> pairSumDLL(Node* head, Node* tail, int x){
 int main(){
     
     DoublyLinkedList dll;
-    dll.insertAtEnd(1);
     dll.insertAtEnd(2);
-    dll.insertAtEnd(3);
-    dll.insertAtEnd(2);
-    dll.insertAtEnd(2);
-    dll.insertAtEnd(1);
+    dll.insertAtEnd(4);
+    dll.insertAtEnd(6);
+    dll.insertAtEnd(7);
+    dll.insertAtEnd(9);
+    dll.insertAtEnd(10);
     dll.display();
 
-    dll.deleteSameNeighbourNode(dll.head, dll.tail);
-    dll.display();
+    vector<int>ans = pairSumDLL(dll.head, dll.tail, 11);
+    cout<<ans[0]<<" "<<ans[1]<<endl;
+    
 
     return 0;
 }
