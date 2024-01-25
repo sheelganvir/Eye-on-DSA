@@ -30,7 +30,6 @@ class CircularLinkedList{
         } while (temp!=head);
         cout<<endl;
     }
-    
     void insertAtStart(int val){
         Node* new_node = new Node(val);
         if (head == NULL) {
@@ -62,6 +61,6 @@ int main(){
     cll.insertAtStart(6);
 
     cll.display();
-
+    
     return 0;
 }
