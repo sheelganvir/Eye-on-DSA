@@ -30,6 +30,25 @@ class CircularLinkedList{
         } while (temp!=head);
         cout<<endl;
     }
+    
+    void insertAtStart(int val){
+        Node* new_node = new Node(val);
+        if (head == NULL) {
+            head = new_node;
+            new_node->next = head;   // circular linked list
+            return;
+        }
+
+        Node* tail = head;
+        while(tail->next != head){
+            tail=tail->next;
+        }
+        // now tail is pointing to the last node
+
+        tail->next = new_node;
+        new_node->next = head;
+        head = new_node;
+    }
 
     void insertAtEnd(int val){
        Node * new_node = new Node(val);
@@ -53,14 +72,17 @@ class CircularLinkedList{
 int main(){
     
     CircularLinkedList cll;
-    cll.insertAtEnd(1);
-    cll.insertAtEnd(2);
-    cll.insertAtEnd(3);
-    cll.insertAtEnd(4);
-    cll.insertAtEnd(5);
-    cll.insertAtEnd(6);
+    cll.insertAtStart(1);
+    cll.insertAtStart(2);
+    cll.insertAtStart(3);
+    cll.insertAtStart(4);
+    cll.insertAtStart(5);
+    cll.insertAtStart(6);
 
     cll.display();
-    
+
+    cll.insertAtEnd(10);
+    cll.display();
+
     return 0;
 }
