@@ -50,22 +50,17 @@ class CircularLinkedList{
         head = new_node;
     }
 
-    void insertAtEnd(int val){
-       Node * new_node = new Node(val);
-       if(head==NULL){
-        head = new_node;
-        new_node->next = head;
-        return;
-       }
-
-       Node* tail = head;
-       while(tail->next!=head){
-        tail=tail->next;
-       }
-       // here tail is pointing to the last node
-
-       tail->next = new_node;
-       new_node->next = head; 
+    void deleteAtStart(){
+        if (head==NULL) return ;
+        Node* temp = head;
+        Node* tail = head;
+        while(tail->next!=head){
+            tail=tail->next;
+        }
+        // here temp is pointing to the head
+        tail->next=head->next;
+        head=head->next;
+        free(temp);
     }
 };
 
@@ -81,7 +76,7 @@ int main(){
 
     cll.display();
 
-    cll.insertAtEnd(10);
+    cll.deleteAtStart();
     cll.display();
 
     return 0;
