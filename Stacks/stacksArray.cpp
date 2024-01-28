@@ -30,7 +30,7 @@ class Stack{
         this->top--;
     }
 
-    int top(){
+    int getTop(){
         if(this->top == -1) {
             cout << "Stack Underflow" << endl;
             return INT16_MIN;
@@ -52,6 +52,14 @@ class Stack{
 };
 
 int main(){
-    
+    Stack  st(5);
+    st.push(1);
+    st.push(2);
+    st.push(3);
+    cout<<st.pop()<<endl;
+    cout<<st.getTop()<<endl;
+    cout<<st.isEmpty()<<endl;
+    cout<<st.size()<<endl;
+    cout<<st.isFull()<<endl;
     return 0;
 }
