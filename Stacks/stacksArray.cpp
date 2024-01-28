@@ -22,10 +22,9 @@ class Stack{
         this->array[this->top] = data;
     }
 
-    int pop(){
+    void pop(){
         if(this->top == -1){
             cout << "Stack Underflow" << endl;
-            return INT16_MIN;
         }
         this->top--;
     }
@@ -56,7 +55,7 @@ int main(){
     st.push(1);
     st.push(2);
     st.push(3);
-    cout<<st.pop()<<endl;
+    st.pop();
     cout<<st.getTop()<<endl;
     cout<<st.isEmpty()<<endl;
     cout<<st.size()<<endl;
