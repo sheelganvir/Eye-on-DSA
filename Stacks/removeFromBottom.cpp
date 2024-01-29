@@ -9,15 +9,12 @@ using namespace std;
 void removeFromBottom(stack<int> &st){
     
     stack<int>temp;
-    while(not st.empty()){
-        if(st.size()==1){
-            st.pop();
-            break;
-        }
+    while(st.size()!=1){
         int curr = st.top();
         st.pop();
         temp.push(curr);
     }
+    st.pop();
     while(not temp.empty()) {
         int curr = temp.top();
         temp.pop();

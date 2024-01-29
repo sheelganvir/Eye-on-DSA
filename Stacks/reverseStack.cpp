@@ -1,23 +1,29 @@
 /*
-    Remove from Index
+    Remove from bottom
 */
 
 #include <iostream>
 #include <stack>
 using namespace std;
 
-void removeFromIndex(stack<int> &st, int idx){
+void reverse(stack<int> &st){
     
-    stack<int>temp;
-    while(st.size()!=idx){
+    stack<int>t1, t2;
+    while(not st.empty()){
         int curr = st.top();
         st.pop();
-        temp.push(curr);
+        t1.push(curr);
     }
-    st.pop();
-    while(not temp.empty()) {
-        int curr = temp.top();
-        temp.pop();
+    
+    while(not t1.empty()) {
+        int curr = t1.top();
+        t1.pop();
+        t2.push(curr);
+    }
+
+    while(not t2.empty()) {
+        int curr = t2.top();
+        t2.pop();
         st.push(curr);
     }
 }
@@ -28,7 +34,7 @@ int main(){
     st.push(2);
     st.push(3);
     st.push(4);
-    removeFromIndex(st,3);
+    reverse(st);
     while(not st.empty()){
         int curr = st.top();
         st.pop();
