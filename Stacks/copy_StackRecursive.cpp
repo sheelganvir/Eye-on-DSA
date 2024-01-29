@@ -6,24 +6,6 @@
 #include <stack>
 using namespace std;
 
-stack<int> copyStack(stack<int> &input){
-    stack<int>temp;
-    while(not input.empty()){
-        // do the process till the time input stack doesn't becaome empty
-        int curr = input.top();
-        input.pop();
-        temp.push(curr);
-    }
-
-    stack<int>result;
-    while(not temp.empty()){
-        int curr = temp.top();
-        temp.pop();
-        result.push(curr);
-    }
-
-    return result;
-}
 
 void f(stack<int> &st,stack<int> &result){
     if(st.empty()) return;
