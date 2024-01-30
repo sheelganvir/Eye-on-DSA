@@ -1,44 +1,35 @@
 /*
-    Insert at bottom 
+    Check whether a given bracket sequence is balanced or not
 */
 
 #include <iostream>
 #include <stack>
 using namespace std;
 
-void insertAtIndex(stack<int> &st, int x, int idx){
-    /*
-        time: O(n)
-        space: O(n)
-    */
-    stack<int>temp;
-    int n = st.size();
-    int count = 0;
-    while(count < n - idx){
-        count++;
-        int curr = st.top();
-        st.pop();
-        temp.push(curr);
+bool isValid(string str){
+    stack<int> st;
+    for(int i=0 ; i<str.size() ; i++){
+        char ch = str[i];
+        if(ch == '[' or ch == '{' or ch == '('){
+            st.push(ch);
+        }else{
+            // closing bracket 
+            if(ch == ']' and !st.empty() and st.top() == '['){
+                st.pop();
+            }else if(ch == '}' and !st.empty() and st.top() == '{'){
+                st.pop();
+            }else if(ch == ')' and !st.empty() and st.top() == '('){
+                st.pop();
+            }else{
+                return false;
+            }
+        }
     }
-    st.push(x);
-    while(not temp.empty()) {
-        int curr = temp.top();
-        temp.pop();
-        st.push(curr);
-    }
+    return st.empty();
 }
 
 int main(){
-    stack<int> st;
-    st.push(1);
-    st.push(2);
-    st.push(3);
-    st.push(4);
-    insertAtIndex(st,10,3);
-    while(not st.empty()){
-        int curr = st.top();
-        st.pop();
-        cout<<curr<<endl;
-    }
+    string str = "[{{(){}[]}}()]";
+    cout<<isValid(str)<<endl;
     return 0;
 }
