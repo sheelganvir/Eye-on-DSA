@@ -13,7 +13,7 @@ vector<int> pge(vector<int> &arr){
     st.push(0);
     for(int i=1 ; i<n ; i++){
         while(!st.empty() and arr[i]>arr[st.top()]){
-            output[st.top()]=arr[i];
+            output[st.top()]=n-i-1;
             st.pop();
         }
         st.push(i);
@@ -39,7 +39,7 @@ int main(){
     }
     vector<int>result = pge(v);
     for(int i=0 ; i<result.size() ; i++){
-        cout<<result[i]<<" ";
+        cout<<i-result[i]<<" ";
     }
     return 0;
 }
