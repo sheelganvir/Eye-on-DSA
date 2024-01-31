@@ -4,7 +4,7 @@
 using namespace std;
 
 
-vector<int> nge(vector<int> &arr){
+vector<int> nse(vector<int> &arr){
     int n = arr.size();
     vector<int>output(n,-1);
     stack<int>st;
@@ -33,7 +33,7 @@ int main(){
         cin>>x;
         v.push_back(x);
     }
-    vector<int>result = nge(v);
+    vector<int>result = nse(v);
     for(int i=0 ; i<result.size() ; i++){
         cout<<result[i]<<" ";
     }
