@@ -5,7 +5,7 @@
 using namespace std;
 
 
-vector<int> nge(vector<int> &arr){
+vector<int> pge(vector<int> &arr){
     reverse(arr.begin(),arr.end());
     int n = arr.size();
     vector<int>output(n,-1);
@@ -36,7 +36,7 @@ int main(){
         cin>>x;
         v.push_back(x);
     }
-    vector<int>result = nge(v);
+    vector<int>result = pge(v);
     for(int i=0 ; i<result.size() ; i++){
         cout<<result[i]<<" ";
     }
