@@ -1,21 +1,12 @@
-/*
-    Given a series of N daily price quotes for a stack, we need to calculate the span of
-    the stock's price for all N days. The span of the stock's price in one day is the 
-    maximum number of consecutive days (starting from that day and going backward)
-    for which the stock price was less than or equal to the price of that day.
-
-    Example: Input: [100, 80, 60, 70, 60, 75, 85]
-             Output: [1, 1, 1, 2, 1, 4, 6]
-             
-*/
-
 #include <iostream>
 #include <stack>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 
-vector<int> nge(vector<int> &arr){
+vector<int> pge(vector<int> &arr){
+    reverse(arr.begin(),arr.end());
     int n = arr.size();
     vector<int>output(n,-1);
     stack<int>st;
@@ -31,6 +22,8 @@ vector<int> nge(vector<int> &arr){
         output[st.top()] = -1;
         st.pop();
     }
+    reverse(output.begin(),output.end());
+    reverse(arr.begin(),arr.end());
     return output;
 }
 
@@ -44,7 +37,7 @@ int main(){
         cin>>x;
         v.push_back(x);
     }
-    vector<int>result = nge(v);
+    vector<int>result = pge(v);
     for(int i=0 ; i<result.size() ; i++){
         cout<<result[i]<<" ";
     }

@@ -23,6 +23,7 @@ vector<int> pge(vector<int> &arr){
         st.pop();
     }
     reverse(output.begin(),output.end());
+    reverse(arr.begin(),arr.end());
     return output;
 }
 
