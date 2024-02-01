@@ -13,7 +13,7 @@ vector<int> pge(vector<int> &arr){
     st.push(0);
     for(int i=1 ; i<n ; i++){
         while(!st.empty() and arr[i]>arr[st.top()]){
-            output[st.top()]=n-i-1;
+            output[st.top()]=n-i-1; //because after reverse indices will be change
             st.pop();
         }
         st.push(i);
@@ -26,7 +26,6 @@ vector<int> pge(vector<int> &arr){
     reverse(arr.begin(),arr.end());
     return output;
 }
-
 
 int main(){
     int n;
