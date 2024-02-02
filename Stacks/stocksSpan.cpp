@@ -26,8 +26,6 @@ vector<int> pge(vector<int> &arr){
     reverse(arr.begin(),arr.end());
     return output;
 }
-
-
 int main(){
     int n;
     cin>>n;
