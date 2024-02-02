@@ -27,7 +27,6 @@ vector<int> pge(vector<int> &arr){
     return output;
 }
 
-
 int main(){
     int n;
     cin>>n;
