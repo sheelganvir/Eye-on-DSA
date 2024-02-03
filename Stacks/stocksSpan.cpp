@@ -17,6 +17,7 @@ vector<int> pge(vector<int> &arr){
         }
         st.push(i);
     }
+    
     while(not st.empty()){  // not mandatory as we had already initialize the output array with -1
         output[st.top()] = -1;
         st.pop();
