@@ -11,6 +11,6 @@ int main(){
     cout<<st.top()<<endl;
     st.pop();
     cout<<st.top()<<endl;
-    cout<<st.empty()<<endl;
+    cout<<st.empty()<<endl; 
     return 0;
 }

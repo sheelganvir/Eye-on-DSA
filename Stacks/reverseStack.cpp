@@ -28,7 +28,7 @@ void reverse(stack<int> &st){
     }
 }
 
-int main(){
+int main(){ 
     stack<int> st;
     st.push(1);
     st.push(2);
