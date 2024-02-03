@@ -4,7 +4,6 @@
 #include <algorithm>
 using namespace std;
 
-
 vector<int> pge(vector<int> &arr){
     reverse(arr.begin(),arr.end());
     int n = arr.size();
