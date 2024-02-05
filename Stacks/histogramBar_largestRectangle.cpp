@@ -9,30 +9,33 @@
 #include <algorithm>
 using namespace std;
 
-vector<int> pge(vector<int> &arr){
-    reverse(arr.begin(),arr.end());
-    int n = arr.size();
-    vector<int>output(n,-1);
+int largestRectangleArea(vector<int>& heights) {
+    int n = heights.size();
     stack<int>st;
+    int ans = INT16_MIN;
     st.push(0);
     for(int i=1 ; i<n ; i++){
-        while(!st.empty() and arr[i]>arr[st.top()]){
-            output[st.top()]=n-i-1; //because after reverse indices will be change
-            st.pop(); 
+        while(!st.empty() and heights[i]<heights[st.top()]){
+            int ele = heights[st.top()];
+                st.pop();
+            int nsi = i;
+            int psi = (st.empty())? (-1) : st.top();
+            ans = max(ans, ele*(nsi - psi - 1));
+            
         }
         st.push(i);
     }
-
-    while(not st.empty()){  // not mandatory as we had already initialize the output array with -1
-        output[st.top()] = -1;
-        st.pop();
+    while(not st.empty()){
+        int ele = heights[st.top()];
+            st.pop();
+        int nsi = n;
+        int psi = (st.empty())? (-1) : st.top();
+        ans = max(ans, ele*(nsi - psi - 1));
+        
     }
-    
-
-    reverse(output.begin(),output.end());
-    reverse(arr.begin(),arr.end());
-    return output;
+    return ans;
 }
+
 int main(){
     int n;
     cin>>n;
@@ -42,9 +45,7 @@ int main(){
         cin>>x;
         v.push_back(x);
     }
-    vector<int>result = pge(v);
-    for(int i=0 ; i<result.size() ; i++){
-        cout<<i-result[i]<<" ";
-    }
+    int ans = largestRectangleArea(v);
+    cout<<ans<<endl;
     return 0;
 }
