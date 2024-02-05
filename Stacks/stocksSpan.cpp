@@ -20,7 +20,7 @@ vector<int> pge(vector<int> &arr){
     for(int i=1 ; i<n ; i++){
         while(!st.empty() and arr[i]>arr[st.top()]){
             output[st.top()]=n-i-1; //because after reverse indices will be change
-            st.pop();
+            st.pop(); 
         }
         st.push(i);
     }
