@@ -1,3 +1,10 @@
+/*
+    Given a series of n daily price quotes for aa stack, we need to calculate the span of
+    the stock's price for all n days. The span of the stock's price in one day is the 
+    maximum number of consecutive days (starting from that day and going backward) 
+    for which the stock price was less than or equal to price of that day.
+*/
+
 #include <iostream>
 #include <stack>
 #include <vector>
