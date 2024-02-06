@@ -12,13 +12,16 @@
 
 */
 
+#include <iostream>
+#include <stack>
 #define ll long long int 
+using namespace std;
 class MinStack {
 public:
     stack<ll>st;
     ll min;
     MinStack() {
-        this->min = INT_MAX;
+        this->min = INT16_MAX;
     }
     
     void push(int val) {
