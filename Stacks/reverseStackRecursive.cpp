@@ -25,7 +25,6 @@ void insertAtBottom(stack<int> &st,int x){
     }
 }
 
-
 void reverse(stack<int> &st){
     if(st.empty()) return;
     int curr = st.top();
