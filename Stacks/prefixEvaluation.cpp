@@ -23,7 +23,7 @@ int calc(int v1, int v2, int op){
 
 int eval(string &str){
     stack<int>st;
-    for(int i=0 ; i<str.size() ; i++){
+    for(int i=str.size() - 1 ; i>=0 ; i--){
         char ch = str[i];
         if(isdigit(ch)){
             st.push(ch - '0');
