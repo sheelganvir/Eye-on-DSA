@@ -15,13 +15,13 @@ int calc(int v1, int v2, int op){
         return v1+v2;
     }
     if(op == '/'){
-        return v2/v1;
+        return v1/v2;
     }
-    return v2-v1;
+    return v1-v2;
 }
 
 
-int eval(string str){
+int eval(string &str){
     stack<int>st;
     for(int i=0 ; i<str.size() ; i++){
         char ch = str[i];
@@ -32,7 +32,7 @@ int eval(string str){
             int v2 = st.top();
             st.pop();
             int v1 = st.top();
-            st.top();
+            st.pop();
             st.push(calc(v1, v2, ch));
         }
     }
