@@ -17,6 +17,7 @@ void f(stack<int> &st, int x){
     st.push(curr);
 }
 
+
 int main(){
     stack<int> st;
     st.push(1);
