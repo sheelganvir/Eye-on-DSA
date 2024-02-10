@@ -40,7 +40,7 @@ int eval(string &str){
 }
 
 int main(){
-    string str = "231*+9-";
+    string str = "-9+*132";
     cout<<eval(str)<<endl;
     return 0;
 }
