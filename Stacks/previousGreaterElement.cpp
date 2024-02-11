@@ -1,3 +1,7 @@
+/*
+    Given an array, find the previous greater element.
+*/
+
 #include <iostream>
 #include <stack>
 #include <vector>
