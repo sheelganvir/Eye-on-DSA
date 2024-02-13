@@ -34,6 +34,7 @@ int main(){
     st.push(4);
     stack<int>res = copyStack(st);
     
+    
     while(not res.empty()){
         int curr = res.top();
         res.pop();
