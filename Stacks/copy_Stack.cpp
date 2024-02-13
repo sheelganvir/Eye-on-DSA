@@ -19,6 +19,7 @@ stack<int> copyStack(stack<int> &input){
     while(not temp.empty()){
         int curr = temp.top();
         temp.pop();
+        
         result.push(curr);
     }
 
