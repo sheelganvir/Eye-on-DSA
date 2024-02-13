@@ -19,7 +19,7 @@ stack<int> copyStack(stack<int> &input){
     while(not temp.empty()){
         int curr = temp.top();
         temp.pop();
-        
+
         result.push(curr);
     }
 
@@ -32,7 +32,6 @@ int main(){
     st.push(2);
     st.push(3);
     st.push(4);
-
     stack<int>res = copyStack(st);
     
     while(not res.empty()){
