@@ -26,6 +26,7 @@ stack<int> copyStack(stack<int> &input){
     return result;
 }
 
+
 int main(){
     stack<int> st;
     st.push(1);
