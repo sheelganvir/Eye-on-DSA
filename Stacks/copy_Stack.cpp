@@ -15,7 +15,6 @@ stack<int> copyStack(stack<int> &input){
         temp.push(curr);
     }
 
-
     stack<int>result;
     while(not temp.empty()){
         int curr = temp.top();
