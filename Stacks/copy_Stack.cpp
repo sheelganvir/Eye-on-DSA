@@ -22,6 +22,7 @@ stack<int> copyStack(stack<int> &input){
 
         result.push(curr);
     }
+    
 
     return result;
 }
