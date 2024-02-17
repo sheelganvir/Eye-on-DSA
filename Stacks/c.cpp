@@ -23,6 +23,7 @@ int maxOperations(vector<int>& nums) {
         }
         left++;
         right--;
+        
     }
     return maxOps;
 }
