@@ -47,6 +47,7 @@ public:
         }
     }
     
+    
     int top() {
         if(this->st.size() == 1){
             return this->st.top();
