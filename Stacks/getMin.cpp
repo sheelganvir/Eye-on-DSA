@@ -59,8 +59,7 @@ public:
     
     int getMin() {
         return this->min;
-    }
-    
+    }  
 };
 
 /**
