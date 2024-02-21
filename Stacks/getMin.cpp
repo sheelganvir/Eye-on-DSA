@@ -34,8 +34,7 @@ public:
                 this->min = val;
             }
         }
-    }
-    
+    }    
     
     void pop() {
         if(not this->st.empty()){
