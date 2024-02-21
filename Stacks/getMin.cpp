@@ -45,8 +45,7 @@ public:
                 this->st.pop();
             }
         }
-    }    
-    
+    }        
 
     int top() {
         if(this->st.size() == 1){
