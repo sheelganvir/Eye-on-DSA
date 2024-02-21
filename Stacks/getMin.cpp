@@ -36,6 +36,7 @@ public:
         }
     }
     
+    
     void pop() {
         if(not this->st.empty()){
             if(this->st.top()>=0){
@@ -47,7 +48,7 @@ public:
         }
     }    
     
-    
+
     int top() {
         if(this->st.size() == 1){
             return this->st.top();
