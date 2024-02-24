@@ -25,6 +25,7 @@ void insertAtBottom(stack<int> &st,int x){
     }
 }
 
+
 int main(){
     stack<int> st;
     st.push(1);
