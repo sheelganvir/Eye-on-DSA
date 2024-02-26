@@ -36,6 +36,7 @@ int largestRectangleArea(vector<int>& heights) {
     return ans;
 }
 
+
 int main(){
     int n;
     cin>>n;
