@@ -47,4 +47,5 @@ int main(){
     int ans = largestRectangleArea(v);
     cout<<ans<<endl;
     return 0;
+    
 }
