@@ -25,6 +25,7 @@ int largestRectangleArea(vector<int>& heights) {
         }
         st.push(i);
     }
+    
     while(not st.empty()){
         int ele = heights[st.top()];
             st.pop();
