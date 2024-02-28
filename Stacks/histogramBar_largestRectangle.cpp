@@ -2,6 +2,7 @@
     Given an array of integer heights representing histogram's bar height where the width of each abr is 1,
     return the area of the largest rectangle in the histogram.
 */
+
 #include <iostream>
 #include <stack>
 #include <vector>
