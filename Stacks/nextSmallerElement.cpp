@@ -3,7 +3,6 @@
 #include <vector>
 using namespace std;
 
-
 vector<int> nse(vector<int> &arr){
     int n = arr.size();
     vector<int>output(n,-1);
