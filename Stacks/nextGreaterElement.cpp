@@ -23,7 +23,6 @@ vector<int> nge(vector<int> &arr){
     return output;
 }
 
-
 int main(){
     int n;
     cin>>n;
