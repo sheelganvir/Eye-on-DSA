@@ -3,7 +3,6 @@
     the linked list and return its head. 
 */
 
-
 #include <iostream>
 using namespace std;
 
