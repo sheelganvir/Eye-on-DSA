@@ -1,5 +1,13 @@
+/*
+    Conversion of a prefix expression  to infix expression.
+
+    prefix: * + 3 2 - 1 5   -->   (3+2) * (1-5)
+    postfix: 3 2 + 1 5 - *  -->   (3+2) * (1-5)
+
+*/
 #include <iostream>
 #include <stack>
+#include <algorithm>
 #include <math.h>
 
 using namespace std;
@@ -21,26 +29,27 @@ int calc(int v1, int v2, int op){
 }
 
 
-int eval(string &str){
-    stack<int>st;
-    for(int i=str.size() - 1 ; i>=0 ; i--){
-        char ch = str[i];
-        if(isdigit(ch)){
-            st.push(ch - '0');
+string eval(string &pre){
+    stack<string>st;
+    reverse(pre.begin(), pre.end()); 
+    for(int i=0 ; i<pre.size() ; i++){
+        if(isdigit(pre[i])){
+            st.push(to_string(pre[i] - '0'));
         } 
         else{
-            int v2 = st.top();
+            string v1 = st.top();
             st.pop();
-            int v1 = st.top();
+            string v2 = st.top();
             st.pop();
-            st.push(calc(v1, v2, ch));
+            string newexp = v1 + v2 +  pre[i];
+            st.push(newexp);
         }
     }
     return st.top();
 }
 
 int main(){
-    string str = "-9+*132";
+    string str = "*+32-15";
     cout<<eval(str)<<endl;
     return 0;
 }
