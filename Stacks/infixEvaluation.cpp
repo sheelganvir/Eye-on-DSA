@@ -74,7 +74,7 @@ int eval(string &str){
 }
 
 int main(){
-    string str = "-9+*132";
+    string str = "1+(2*(3-1))+2";
     cout<<eval(str)<<endl;
     return 0;
 }
