@@ -27,7 +27,6 @@ vector<int> pse(vector<int> &arr){
     return output;
 }
 
-
 int main(){
     int n;
     cin>>n;
