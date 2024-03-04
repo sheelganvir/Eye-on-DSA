@@ -28,7 +28,6 @@ int calc(int v1, int v2, int op){
     return v1-v2;
 }
 
-
 string eval(string &pre){
     stack<string>st;
     reverse(pre.begin(), pre.end()); 
@@ -47,6 +46,7 @@ string eval(string &pre){
     }
     return st.top();
 }
+
 
 int main(){
     string str = "*+32-15";
