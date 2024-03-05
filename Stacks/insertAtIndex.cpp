@@ -28,7 +28,6 @@ void insertAtIndex(stack<int> &st, int x, int idx){
     }
 }
 
-
 int main(){
     stack<int> st;
     st.push(1);
