@@ -27,6 +27,7 @@ int eval(string &str){
         if(isdigit(ch)){
             st.push(ch - '0');
         } 
+        
         else{
             int v2 = st.top();
             st.pop();
