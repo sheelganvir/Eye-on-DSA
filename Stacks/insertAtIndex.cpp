@@ -6,6 +6,7 @@
 #include <stack>
 using namespace std;
 
+
 void insertAtIndex(stack<int> &st, int x, int idx){
     /*
         time: O(n)
