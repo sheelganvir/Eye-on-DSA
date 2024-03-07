@@ -13,6 +13,8 @@
 
 using namespace std;
 
+
+
 int calc(int v1, int v2, int op){
     if(op == '^'){
         return pow(v1, v2);
