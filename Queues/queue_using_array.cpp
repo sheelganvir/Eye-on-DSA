@@ -22,6 +22,7 @@ public:
         if(this->front == this->back){
             this->front = -1;
             this->back = -1;
+            this->v.clear();
         }
         else{
             this->front++;
