@@ -5,12 +5,15 @@
     postfix: 3 2 + 1 5 - *  -->   (3+2) * (1-5)
 
 */
+
 #include <iostream>
 #include <stack>
 #include <algorithm>
 #include <math.h>
 
 using namespace std;
+
+
 
 int calc(int v1, int v2, int op){
     if(op == '^'){
@@ -46,6 +49,7 @@ string eval(string &pre){
     }
     return st.top();
 }
+
 
 int main(){
     string str = "*+32-15";
