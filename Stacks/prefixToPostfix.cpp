@@ -50,6 +50,7 @@ string eval(string &pre){
     return st.top();
 }
 
+
 int main(){
     string str = "*+32-15";
     cout<<eval(str)<<endl;
