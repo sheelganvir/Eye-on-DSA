@@ -1,3 +1,7 @@
+/*
+    Rverse the queue
+*/
+
 #include <iostream>
 #include <queue>
 #include <stack>
