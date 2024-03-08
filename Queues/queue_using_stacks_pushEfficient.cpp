@@ -3,10 +3,9 @@
     the task is to implement a queue using instances of stack data structure 
     and operations on them.
 
-    we can do this with two cases:
+    Here, we can do this with the below case:
 
     1) Push efficient (enqueque) -> Time complexity : O(1) , pop(dequeue) can be of bad complexity
-    2) Pop efficient (dequeque) -> Time complexity : O(1) , push(enqueue) can be of bad complexity
 */
 
 #include <iostream>
