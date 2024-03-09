@@ -1,16 +1,18 @@
 #include <iostream>
-#include <unordered_set>
+#include <set>
 using namespace std;
 
 int main(){
-    unordered_set<int> set1;
+    multiset<int> set1;
+    //multiset<int, greater<int>>set1;
 
     // Insertion is a set
     set1.insert(3);
     set1.insert(2);
     set1.insert(1);
-    set1.insert(1);
     set1.insert(4);
+    set1.insert(4);
+    set1.insert(5);
     set1.insert(5);
     
     cout<<set1.size()<<endl; // 3
@@ -18,7 +20,7 @@ int main(){
     cout<<set1.size()<<endl; // 3, because it does not allow duplicate elements
 
     //traversal in a set using for loop
-    unordered_set<int>::iterator itr;
+    multiset<int>::iterator itr;
     for(itr=set1.begin(); itr!=set1.end(); itr++){
         cout<<*itr<<" ";
     }cout<<endl;
@@ -27,8 +29,6 @@ int main(){
     for(auto value:set1){
         cout<<value<<" ";
     }cout<<endl;
-
-    // Deleteing elemets from a set
     
     return 0;
 }
