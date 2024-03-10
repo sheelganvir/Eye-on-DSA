@@ -1,3 +1,15 @@
+/*
+    Given an integer n and n elements. Return the sum of repetitive elemets.
+
+    Input: n=7
+           Elements=[1 1 2 1 3 3 3]
+
+    Output: 4 (as, 1+3 = 4)
+
+
+    Time complexity: O(n), n-> number of elements
+*/
+
 #include <iostream>
 #include <map>
 #include <vector>
