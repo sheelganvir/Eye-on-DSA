@@ -1,25 +1,24 @@
 /*
-    Check whether two strings are isomorphic of each other. Return true if they are else return false.
+    Given an array of length of n and a target, return a pair whose sum is equal to the given target. 
+    If there is no pair present, return -1.
 
-    Isomorphic: Two strings are isomorphic of each other if there is a one to one mapping is possible for 
-                every charcters of the first string to every character of second string and all occurreneces
-                of every character in first character in first string maps to the same character in the second string.
+    Input1: n = 7
+            Elements = [1,4,5,11,13,10,2]
+            Target = 13
 
-    Input1: aab
-            xxy
+    Output1: [3,6]
 
-    Output1: True
+    Input2: n = 5
+            Elements = [9,10,2,3,5]
+            Target = 15
 
-    Input2: abcdec
-            viouog
+    Output2: [1,4] 
 
-    Output2: False 
-
-    ************************************************************************************************
-            Time complexity: O(N), N is sum of lengths of s1 and s2
+    ***********************************************************************************************
+            Time complexity: O(n), n is the length of array
             Space complexity: O(n), n is the number of unique characters in string s1 and s2
 
-    ************************************************************************************************
+    **********************************************************************************************
 
 
 */
