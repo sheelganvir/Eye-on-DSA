@@ -29,39 +29,39 @@
 #include <unordered_map>
 using namespace std;
 
-bool checkNoOneToManyMapping(string s1, string s2){
+vector<int> findPairWithSumTarget(vector<int>& v, int target){
 
-    unordered_map<char,char> m;
-    for(int i=0 ; i<s1.size() ; i++){
-        if(m.find(s1[i])!=m.end()){
-            if(m[s1[i]]!=s2[i]){ 
-                return false;
-            }
-        }else{
-            m[s1[i]] = s2[i];
+    unordered_map<int,int> m;
+    vector<int> ans(2,-1);
+
+    for(int i=0 ; i<v.size() ; i++){
+        if(m.find(target-v[i])!=m.end()){
+            ans[0] = m[target-v[i]];
+            ans[1] = i;
+            return ans;
+        }
+        else{
+            m[v[i]] = i;
         }
     }
-    return true;
-}
-
-bool checkIsomorphic(string s1, string s2){
-    //if size are not equal
-    if (s1.size() != s2.size()) return false;
-
-    //checking one to many mapping from s1->s2
-    bool s1s2 = checkNoOneToManyMapping(s1,s2);
-
-    //checking one to many mapping from s2->s1
-    bool s2s1 = checkNoOneToManyMapping(s2,s1);
-
-    return s1s2 and s2s1;
+    return ans;
 }
 
 int main(){
-    
-    string s1, s2;
-    cin>>s1>>s2;
 
-    cout<<(checkIsomorphic(s1,s2)? "True":"False")<<endl;
+    int n;
+    cin>>n;
+
+    vector<int>v(n);
+    for(int i=0 ; i<n ;i++){
+        cin>>v[i];
+    }
+
+    int target;
+    cin>>target;    
+
+    vector<int> ans = findPairWithSumTarget(v, target);
+    cout<<ans[0]<<", "<<ans[1]<<endl;
+
     return 0;
 }
