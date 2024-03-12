@@ -17,7 +17,7 @@
 
     ********************************************************************************
             Time complexity: O(N), N is sum of lengths of s1 and s2
-            Space complexity: O(n), n is the number of characters in string
+            Space complexity: O(n), n is the number of unique characters in string s1 and s2
 
     ********************************************************************************
 
@@ -35,7 +35,7 @@ bool checkNoOneToManyMapping(string s1, string s2){
     unordered_map<char,char> m;
     for(int i=0 ; i<s1.size() ; i++){
         if(m.find(s1[i])!=m.end()){
-            if(m[s1[i]]!=s2[i]){
+            if(m[s1[i]]!=s2[i]){ 
                 return false;
             }
         }else{
