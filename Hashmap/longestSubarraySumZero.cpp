@@ -30,7 +30,7 @@ int maxLengthZeroSumSubarray(vector<int>& v){
 
     unordered_map<int,int> m;
     int prefixSum = 0;
-    int maxLength = INT16_MIN;
+    int maxLength = 0;
 
     for(int i=0 ; i<v.size() ; i++){
         prefixSum+=v[i];
