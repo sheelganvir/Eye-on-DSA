@@ -18,6 +18,8 @@ void permutation(string &str, int i){
     for(int j = i ; j<str.size() ; j++){
         swap(str[i],str[j]);
         permutation(str, i+1);
+        swap(str[i],str[j]);
+
     }
 }
 
