@@ -6,6 +6,7 @@ using namespace std;
 
 class Hashing{
 public:
+
     vector<list<int> > hashtable;   //creating vector of list
     int buckets;
 
