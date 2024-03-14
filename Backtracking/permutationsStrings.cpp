@@ -23,6 +23,7 @@ void permutation(string &str, int i){
     }
 }
 
+
 int main(){ 
     string str = "abc";
     permutation(str,0);
