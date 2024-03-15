@@ -7,6 +7,7 @@ using namespace std;
 class Hashing{
 public:
 
+
     vector<list<int> > hashtable;   //creating vector of list
     int buckets;
 
@@ -28,7 +29,7 @@ public:
         int idx = hashvalue(key);
         return find(hashtable[idx].begin(), hashtable[idx].end(),key);
     }
-    
+
 
     void deleteKey(int key){
         int idx = hashvalue(key);
