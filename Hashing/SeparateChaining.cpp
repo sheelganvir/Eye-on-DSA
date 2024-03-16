@@ -29,7 +29,6 @@ public:
         return find(hashtable[idx].begin(), hashtable[idx].end(),key);
     }
 
-
     void deleteKey(int key){
         int idx = hashvalue(key);
         if(searchKey(key)!=hashtable[idx].end()){   //key is present
