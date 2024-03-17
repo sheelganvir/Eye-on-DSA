@@ -40,8 +40,6 @@ public:
     }
 };
 
-
-
 int main(){
     Hashing h(10);
 
