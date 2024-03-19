@@ -47,8 +47,6 @@ int main(){
     h.addKey(9);
     h.addKey(3);
     
-
-    
     h.deleteKey(3);
     return 0;
 }
