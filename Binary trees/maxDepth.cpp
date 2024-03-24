@@ -18,15 +18,19 @@ public:
     }
 };
 
-void inorderTraversal(Node* rootNode){
-    // base case
-    if(rootNode==NULL){
-        return;
+int maxDepth(Node* root) {
+
+    //base case
+    if(root == NULL) {
+        return 0;
     }
-    // recursive call
-    inorderTraversal(rootNode->left);
-    cout << rootNode->value << " ";
-    inorderTraversal(rootNode->right);
+
+    //recursive case
+    int leftDepth = maxDepth(root->left);
+    int rightDepth = maxDepth(root->right);
+    //The depth of the current node will
+
+    return (max(leftDepth,rightDepth)+1);
 }
 
 int main(){
@@ -38,7 +42,7 @@ int main(){
     root->left->right = new Node(5);
     root->right->right = new Node(11); 
 
-    inorderTraversal(root);
+    cout<<maxDepth(root);
 
     return 0;
 }
