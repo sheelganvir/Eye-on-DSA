@@ -25,7 +25,7 @@ int leafNodes(Node* root) {
         return 0;
     }
     if(root->left==NULL && root ->right==NULL) {
-        return 1;
+        return 1;   // Here leaf node is the root node
     }
 
     //recursive case
