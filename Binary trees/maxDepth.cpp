@@ -42,7 +42,7 @@ int main(){
     root->left->right = new Node(5);
     root->right->right = new Node(11); 
 
-    cout<<maxDepth(root);
+    cout<<maxDepth(root)<<endl;
 
     return 0;
 }
