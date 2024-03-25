@@ -14,6 +14,7 @@ Example:
 
 Output: 6 5 11 4 10 2
 
+
 */
 
 #include<iostream>
