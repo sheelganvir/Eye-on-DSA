@@ -1,6 +1,6 @@
 /*
-    Given the root of a binary tree, imagine yourself standing on the right side of it, return 
-    the values of the nodes you can see from top to bottom.
+    ? Given the root of a binary tree, imagine yourself standing on the right side of it, return 
+     the values of the nodes you can see from top to bottom.
 
     Hint: We have to print rightmost node.
 
@@ -13,7 +13,6 @@ Example:
             
 
 Output: 6 5 11 4 10 2
-
 
 */
 
