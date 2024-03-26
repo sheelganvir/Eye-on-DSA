@@ -1,6 +1,6 @@
 /*
     ? Given the root of a binary tree, imagine yourself standing on the right side of it, return 
-     the values of the nodes you can see from top to bottom.
+    ? the values of the nodes you can see from top to bottom.
 
     Hint: We have to print rightmost node.
 
