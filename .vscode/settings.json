@@ -5,5 +5,8 @@
         "iostream": "cpp",
         "new": "cpp",
         "algorithm": "cpp"
-    }
+    },
+    "cSpell.words": [
+        "subarray"
+    ]
 }

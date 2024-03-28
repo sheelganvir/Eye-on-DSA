@@ -1,5 +1,5 @@
 /*
-    Given an array of length of n, find the length of longest subarray with a sum equal to 0.
+    ? Given an array of length of n, find the length of longest subarray with a sum equal to 0.
 
     Input1: n = 8
             arr = [15,-2,2,-8,1,7,10,23]
@@ -12,8 +12,8 @@
     Output2: 0
 
     ***********************************************************************************************
-            Time complexity: O(n), n is the length of array
-            Space complexity: O(n), n is the number of unique characters in string s1 and s2
+        !    Time complexity: O(n), n is the length of array
+        !    Space complexity: O(n), n is the number of unique characters in string s1 and s2
 
     **********************************************************************************************
 
