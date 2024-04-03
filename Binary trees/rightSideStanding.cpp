@@ -16,7 +16,6 @@ Example:
 Output: 2 10 11 12 
 */
 
-
 #include <iostream>
 #include <queue>
 using namespace std;
