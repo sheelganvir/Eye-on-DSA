@@ -62,7 +62,6 @@ vector<int> levelorderReverseTraversal(Node* root){
     return ans;
 }
 
-
 int main(){
     Node* root = new Node(2);
     root->left = new Node(4);
