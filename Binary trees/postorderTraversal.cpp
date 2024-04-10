@@ -30,7 +30,6 @@ void postorderTraversal(Node* rootNode){
 int main(){
 
 
-
     Node* root  = new Node(2);    
     root->left = new Node(4);
     root->right = new Node(10);
