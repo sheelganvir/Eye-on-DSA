@@ -27,7 +27,6 @@ void postorderTraversal(Node* rootNode){
     postorderTraversal(rootNode->left);
 }
 
-
 int main(){
 
     Node* root  = new Node(2);    
