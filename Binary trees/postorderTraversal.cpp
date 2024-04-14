@@ -15,7 +15,6 @@ public:
     }
 };
 
-
 void postorderTraversal(Node* rootNode){
     // base case
     if(rootNode==NULL){
@@ -26,7 +25,6 @@ void postorderTraversal(Node* rootNode){
     cout << rootNode->value << " ";
     postorderTraversal(rootNode->left);
 }
-
 
 int main(){
 
