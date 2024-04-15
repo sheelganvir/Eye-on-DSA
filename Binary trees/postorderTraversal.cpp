@@ -36,6 +36,5 @@ int main(){
     root->right->right = new Node(11); 
 
     postorderTraversal(root);
-
     return 0;
 }
