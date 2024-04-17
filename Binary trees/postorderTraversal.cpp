@@ -25,9 +25,7 @@ void postorderTraversal(Node* rootNode){
     cout << rootNode->value << " ";
     postorderTraversal(rootNode->left);
 }
-
 int main(){
-
     Node* root  = new Node(2);    
     root->left = new Node(4);
     root->right = new Node(10);
