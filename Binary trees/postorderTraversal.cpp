@@ -14,14 +14,13 @@ public:
         left = right = NULL;
     }
 };
-
 void postorderTraversal(Node* rootNode){
     // base case
     if(rootNode==NULL){
         return;
     }
     
-    
+
     // recursive call
     postorderTraversal(rootNode->right);
     cout << rootNode->value << " ";
