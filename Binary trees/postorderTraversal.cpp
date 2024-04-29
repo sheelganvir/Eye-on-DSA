@@ -3,9 +3,7 @@
 #include <iostream>
 using namespace std;
 
-class Node{
-
-    
+class Node{    
 public:
     int value;
     Node* left;
@@ -17,13 +15,12 @@ public:
     }
 };
 
-
-
 void postorderTraversal(Node* rootNode){
     // base case
     if(rootNode==NULL){
         return;
     }
+    
     
     // recursive call
     postorderTraversal(rootNode->right);
