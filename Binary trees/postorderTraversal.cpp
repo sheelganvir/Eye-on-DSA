@@ -14,6 +14,7 @@ public:
         left = right = NULL;
     }
 };
+
 void postorderTraversal(Node* rootNode){
     // base case
     if(rootNode==NULL){
