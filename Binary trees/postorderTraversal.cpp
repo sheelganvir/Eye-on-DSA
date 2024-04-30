@@ -20,8 +20,6 @@ void postorderTraversal(Node* rootNode){
     if(rootNode==NULL){
         return;
     }
-    
-
     // recursive call
     postorderTraversal(rootNode->right);
     cout << rootNode->value << " ";
