@@ -7,7 +7,7 @@ class Node{
 public:
     int value;
     Node* left;
-    
+
     Node* right;
 
     Node(int v){
@@ -15,6 +15,8 @@ public:
         left = right = NULL;
     }
 };
+
+
 
 void postorderTraversal(Node* rootNode){
     // base case
