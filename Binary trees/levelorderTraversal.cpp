@@ -14,7 +14,7 @@ public:
     }
 };
 
-void levelorderTraversal(Node* rootNode){
+void levelOrderTraversal(Node* rootNode){
     // base case
     if(rootNode==NULL){
         return;
@@ -49,7 +49,7 @@ int main(){
     root->left->right = new Node(5);
     root->right->right = new Node(11); 
 
-    levelorderTraversal(root);
+    levelOrderTraversal(root);
 
     return 0;
 }

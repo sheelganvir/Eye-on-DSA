@@ -65,6 +65,7 @@ vector<int> rightViewBinaryTree(Node* root){
     }
     return ans;
 }
+
 int main(){
 
     Node* root  = new Node(2);    

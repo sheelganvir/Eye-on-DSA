@@ -31,6 +31,7 @@ class Node{
         left = right = NULL;
     }
 };
+
 vector<int> topView(Node* root){
     vector<int> ans;
     if(root==NULL){
@@ -62,6 +63,7 @@ vector<int> topView(Node* root){
     }
     return ans;
 }
+
 int main(){
     Node *root = new Node(2);
     root->left = new Node(4);
