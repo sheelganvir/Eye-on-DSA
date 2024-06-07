@@ -22,31 +22,33 @@
 
 using namespace std;
 
-int maxDepth(string s) {
-    int count=0;
-    int max=INT16_MIN;
-    stack<char>st;
-    for(auto i:s)
-    {
-        if(i=='(')
-        {
-            st.push(i);
-            count++;
+vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
+    vector<int> ans;
+    for(int i=0;i<nums1.size();i++){
+        int max=-1;
+        for(int j=0;j<nums2.size();j++){
+            int index=j;
+            int valueAtNums1 = nums1[i]; 
+            int valueAtNums2 = nums2[j]; 
+            if(nums1[i]==nums2[j]){ // Found element in nums2 that matches current element in nums1
+                    while(index!=nums2.size()){ // Iterate through remaining elements in nums2 to find next greater element
+                    if(nums2[index]>nums1[i]){
+                        max=nums2[index]; // Update max if we find a greater element
+                        break;
+                    }
+                    index++;
+                }
+            }
         }
-        if(i==')'){
-            st.pop();
-            count=st.size();
-        }
-        if(count>max)
-        max=count; 
+        ans.push_back(max);
     }
-    return max;
+    return ans;
 }
 
 int main(){
     
-    string str = "(1+(2*3)+((8)/4))+1";
-
-    cout<<maxDepth(str);
+    vector<int>nums1 = {4,1,2};
+    vector<int> nums2 = {1,3,4,2};
+    vector<int> ans = nextGreaterElement(nums1, nums2);
     return 0;
 }
